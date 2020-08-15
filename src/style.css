@@ -472,47 +472,41 @@ textarea:focus {
   background: #161616;
 }
 
-#media,
 #address,
-#mail {
-  text-align: center !important;
+#maps {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.footer .container {
-  padding: 160px 0;
+.map-footer {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
 }
 
-.footer li,
-p,
-h4 {
-  font-size: 24px !important;
+.phone-image {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
 }
 
-.footer h4 {
-  font-weight: lighter;
-  color: #fff;
+.text-image-footer {
+  color: white;
+  padding: 0;
+  margin: 0;
+  align-self: center;
 }
 
-.footer p {
-  color: grey;
-  font-weight: lighter;
+.title-footer {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5%;
 }
 
-.footer li {
-  font-weight: lighter;
-  color: #fff;
-  padding-left: 20px;
-  font-size: 18px !important;
+.subtitle-footer {
+  color: white;
+  margin-bottom: 10%;
 }
-
-#media ul {
-  list-style: none;
-}
-
-#media ul li {
-  display: inline-block;
-}
-
 @media (max-width: 900px) {
   .footer .container {
     width: 92% !important;
