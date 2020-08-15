@@ -358,6 +358,10 @@ button {
   text-transform: uppercase;
 }
 
+.newsletter-title {
+  margin-bottom: 10%;
+}
+
 .newsletter .news-data {
   max-width: 650px;
   margin: 0 auto;
@@ -383,6 +387,12 @@ button {
 
 ::placeholder {
   letter-spacing: 4px;
+}
+
+.center-svg {
+  display: block;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 .newsletter .btn {
