@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/src/404_style.css" />
+    <title>Mecânica Leme</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="content">
+        <h2>404</h2>
+        <h4>Opss! Esta pagina não foi encontrada</h4>
+        <p>
+          A pagina que você esta procurando não foi encontrada, talvez você
+          digitou o endereço errado ou algo do tipo.
+        </p>
+        <a href="./index.html">Voltar para a pagina principal</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var container = document.getElementById("container");
+      window.onmousemove = function (e) {
+        var x = -e.clientX / 5;
+        var y = -e.clientY / 5;
+
+        container.style.backgroundPositionX = x + "px";
+        container.style.backgroundPositionY = y + "px";
+      };
+    </script>
+  </body>
+</html>
