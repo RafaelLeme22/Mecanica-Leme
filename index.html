@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <a name="home"></a>
+    <a id="home" name="home"></a>
     <div class="wrapper">
       <div class="video-container">
         <video playsinline autoplay muted loop id="bgvid">
@@ -32,11 +32,11 @@
         </span>
 
         <ul id="menu">
-          <li><a href="#contact">Inicio</a></li>
-          <li onclick="scrollTo()"><a>Sobre nós</a></li>
-          <li onclick="scrollTo()"><a>Serviços</a></li>
-          <li onclick="scrollTo()"><a>Estatística</a></li>
-          <li onclick="scrollTo()"><a>Contato</a></li>
+          <li href="#home" onclick="scrollToSection(this)"><a>Inicio</a></li>
+          <li href="#about_us" onclick="scrollToSection(this)"><a>Sobre nós</a></li>
+          <li href="#services" onclick="scrollToSection(this)"><a>Serviços</a></li>
+          <li href="#stats" onclick="scrollToSection(this)"><a>Estatística</a></li>
+          <li href="#contact" onclick="scrollToSection(this)"><a>Contato</a></li>
         </ul>
 
         <div id="toggle">
@@ -48,18 +48,18 @@
         <div class="close-btn">close</div>
 
         <ul id="menu">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre nós</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#team">Estatística</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li onclick="scrollToSection()"><a>Inicio</a></li>
+          <li onclick="scrollToSection()"><a>Sobre nós</a></li>
+          <li onclick="scrollToSection()"><a>Serviços</a></li>
+          <li onclick="scrollToSection()"><a>Estatística</a></li>
+          <li onclick="scrollToSection()"><a>Contato</a></li>
         </ul>
       </div>
 
       <div class="content">
         <a name="about"></a>
 
-        <section class="story">
+        <section id="about_us" class="story">
           <div class="container-fluid">
             <div class="section-data">
               <div class="row">
@@ -117,7 +117,7 @@
 
         <a name="services"></a>
 
-        <section class="services">
+        <section id="services" class="services">
           <div class="container-fluid">
             <div class="section-data">
               <div class="row">
@@ -407,7 +407,7 @@
           </div>
         </section>
 
-        <a name="contact"></a>
+        <a id="contact" name="contact"></a>
 
         <section class="contact">
           <div class="container-fluid">
