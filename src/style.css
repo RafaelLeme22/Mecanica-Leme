@@ -98,6 +98,7 @@ video {
   color: #fff;
   font-family: Poppins !important;
   transition: all 500ms ease-out;
+  cursor: pointer;
 }
 
 .nav #brand a:hover {
@@ -125,6 +126,7 @@ video {
   font-family: Poppins !important;
   color: rgb(156, 156, 156);
   transition: all 500ms ease-out;
+  cursor: pointer;
 }
 
 .nav #menu li a:hover {
