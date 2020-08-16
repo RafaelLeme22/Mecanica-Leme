@@ -511,7 +511,7 @@ textarea:focus {
 /*--------------- footer section starts here --------------- */
 
 .footer {
-  background: #161616;
+  background: #4e4d4d;
 }
 
 #address,
@@ -549,6 +549,16 @@ textarea:focus {
   color: white;
   margin-bottom: 10%;
 }
+
+.social-media-icon {
+  padding: 0;
+}
+
+.social-media-icon > img{
+  padding: 0;
+  margin-right: 20px;
+}
+
 @media (max-width: 900px) {
   .footer .container {
     width: 92% !important;
