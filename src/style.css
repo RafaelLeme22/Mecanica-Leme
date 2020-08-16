@@ -71,6 +71,12 @@ video {
   height: 80px;
   position: fixed;
   z-index: 2;
+  background-color: unset;
+  transition: ease-in-out 0.75s;
+}
+
+.nav-scroll-color {
+  background-color: black;
 }
 
 .nav.scrolled {

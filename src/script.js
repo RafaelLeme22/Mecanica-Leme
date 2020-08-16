@@ -1,3 +1,14 @@
+var navElement = document.getElementById("navElement");
+
+window.onscroll = function () {
+  let yPosition = window.scrollY;
+  if (yPosition > 580) {
+    navElement.classList.add("nav-scroll-color");
+  } else {
+    navElement.classList.remove("nav-scroll-color");
+  }
+};
+
 function scrollToSection(e) {
   document
     .getElementById(e.getAttribute("href").substr(1))
