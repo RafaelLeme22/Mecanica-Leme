@@ -451,6 +451,12 @@ button {
   font-family: Poppins !important;
 }
 
+@media (max-width: 768px) {
+  .stats-row {
+    margin-top: 10%;
+  }
+}
+
 /*--------------- contact section starts here --------------- */
 
 #contact-form {
