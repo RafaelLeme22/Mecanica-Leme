@@ -598,6 +598,7 @@ body {
 
 .carousel-container-services{
   position: relative;
+  margin: 0;
   color: #fff;
 }
 
@@ -605,8 +606,8 @@ body {
   position: absolute;
   display: flex;
   flex-direction: row;
-  height: 1000px;
-  /* overflow: hidden; */
+  height: 100%;
+  overflow: hidden;
 }
 .carousel-slide-services img{
   opacity: 0.1;
@@ -616,6 +617,7 @@ body {
 .container-types-service {
   z-index: 10;
   display: flex;
+  padding-right: 0;
   flex-direction: column;
   color: #fff;
 }
