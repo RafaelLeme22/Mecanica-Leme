@@ -300,6 +300,8 @@ button {
 
 .services {
   background: #161616;
+  padding: 0;
+  height: auto;
 }
 
 .service {
@@ -588,4 +590,70 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 background-color: darkgrey;
 outline: 1px solid slategrey;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.carousel-container-services{
+  position: relative;
+  color: #fff;
+}
+
+.carousel-slide-services {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 1000px;
+  /* overflow: hidden; */
+}
+.carousel-slide-services img{
+  opacity: 0.1;
+  width: 100%;
+}
+
+.container-types-service {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.container-types-service > div{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: auto;
+  border-left: 1px solid;
+  flex-direction: row;
+  color: #fff;
+}
+
+.container-types-service > div > div{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-types-service > div > div > p{
+  text-align: justify;
+}
+
+.container-types-service > div > div > div{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-types-service > div > div > div > ul{
+  margin-right: 50px;
+  margin-left: 15px;
+}
+
+.container-types-service > div > div > ul{
+  margin-right: 50px;
+  margin-left: 15px;
+}
+
+.container-types-service > div > h3{
+  margin-right: 100px;
 }
