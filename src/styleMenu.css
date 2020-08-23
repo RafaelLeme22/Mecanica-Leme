@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:800");
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  overflow-x: hidden;
+}
+.nav-mobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
+}
+.nav-mobile a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  color: #ccc;
+}
+.nav-mobile a:hover {
+  color: #fff;
+  transition: 0.4s;
+}
+
+.nav-mobile > a:first-child {
+  margin-top: 20%;
+}
+
+.slide {
+  z-index: 1;
+  transition: ease-in-out 0.7s;
+}
+
+.slide a {
+  color: #000;
+  font-size: 36px;
+}
+#content-menu-mobile {
+  float: right;
+  transition: margin-left 0.7s;
+  overflow: hidden;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn-burger {
+  width: 50px;
+  height: 6px;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.068);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}

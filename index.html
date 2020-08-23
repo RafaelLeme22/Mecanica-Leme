@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/src/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/styleMenu.css" />
   </head>
 
   <body>
@@ -20,9 +21,7 @@
       </div>
 
       <div class="header">
-        <h2>
-          MECÂNICA LEME
-        </h2>
+
       </div>
 
       <nav id="navElement" class="nav">
@@ -38,8 +37,20 @@
           <li href="#contact" onclick="scrollToSection(this)"><a>Contato</a></li>
         </ul>
 
-        <div id="toggle">
-          <div class="span">menu</div>
+        <div id="content-menu-mobile">
+          <div id="slide" class="slide" onclick="toggleSlideMenu()">
+            <div id="menu-btn" class="menu-btn">
+              <div class="menu-btn-burger"></div>
+            </div>
+          </div>
+    
+          <div id="menu-mobile" class="nav-mobile">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+          </div>
         </div>
       </nav>
 
@@ -475,6 +486,23 @@
         </div>
       </div>
     </div>
+    <script>
+      var toggle = true;
+      const menu = document.getElementById("menu-mobile");
+      const slide = document.getElementById("slide");
+      const menuBtn = document.getElementById("menu-btn");
+      function toggleSlideMenu() {
+        if (toggle) {
+          menu.style.width = "100vw";
+          menuBtn.classList.add("open");
+          toggle = !toggle;
+        } else if (!toggle) {
+          menuBtn.classList.remove("open");
+          menu.style.width = "0vw";
+          toggle = !toggle;
+        }
+      }
+    </script>
     <script src="/src/script.js"></script>
   </body>
 </html>
