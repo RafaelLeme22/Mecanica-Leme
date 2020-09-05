@@ -1,5 +1,21 @@
 var navElement = document.getElementById("navElement");
 
+var toggle = true;
+const menu = document.getElementById("menu-mobile");
+const slide = document.getElementById("slide");
+const menuBtn = document.getElementById("menu-btn");
+function toggleSlideMenu() {
+  if (toggle) {
+    menu.style.width = "100vw";
+    menuBtn.classList.add("open");
+    toggle = !toggle;
+  } else if (!toggle) {
+    menuBtn.classList.remove("open");
+    menu.style.width = "0vw";
+    toggle = !toggle;
+  }
+}
+
 window.onscroll = function () {
   let yPosition = window.scrollY;
   if (yPosition > 580) {
@@ -10,6 +26,9 @@ window.onscroll = function () {
 };
 
 function scrollToSection(e) {
+  menuBtn.classList.remove("open");
+  menu.style.width = "0vw";
+  toggle = false;
   document
     .getElementById(e.getAttribute("href").substr(1))
     .scrollIntoView({ behavior: "smooth" });
@@ -64,7 +83,7 @@ carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 // Button Listeners
 
 nextButton.addEventListener("click", () => {
-  if (size == 0){
+  if (size == 0) {
     size = carouselImages[0].clientWidth;
   }
   if (counter >= carouselImages.length - 1) return;
@@ -74,7 +93,7 @@ nextButton.addEventListener("click", () => {
 });
 
 prevButton.addEventListener("click", () => {
-  if (size == 0){
+  if (size == 0) {
     size = carouselImages[0].clientWidth;
   }
   if (counter <= 0) return;

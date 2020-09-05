@@ -1,258 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mecânica Leme</title>
 
-    <link rel="stylesheet" href="/src/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="/src/styleMenu.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mecânica Leme</title>
 
-  <body>
-    <a id="home" name="home"></a>
-    <div class="wrapper">
-      <div class="video-container">
-        <video playsinline autoplay muted loop id="bgvid">
-          <source src="./src/assets/videos/videobg.mp4" type="video/mp4" />
-        </video>
-      </div>
+  <link rel="stylesheet" href="/src/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/styleMenu.css" />
+</head>
 
-      <div class="header">
+<body>
+  <a id="home" name="home"></a>
+  <div class="wrapper">
+    <div class="video-container">
+      <video playsinline autoplay muted loop id="bgvid">
+        <source src="./src/assets/videos/videobg.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <nav id="navElement" class="nav">
+      <span id="brand">
+        <a href="index.html"><img src="./src/assets/images/logo.png" alt="" /></a>
+      </span>
 
-      </div>
+      <ul id="menu">
+        <li href="#home" onclick="scrollToSection(this)"><a>Inicio</a></li>
+        <li href="#about_us" onclick="scrollToSection(this)"><a>A Empresa</a></li>
+        <li href="#services" onclick="scrollToSection(this)"><a>Serviços</a></li>
+        <li href="#stats" onclick="scrollToSection(this)"><a>Estatística</a></li>
+        <li href="#contact" onclick="scrollToSection(this)"><a>Contato</a></li>
+      </ul>
 
-      <nav id="navElement" class="nav">
-        <span id="brand">
-          <a href="index.html"><img src="./src/assets/images/logo.png" alt="" /></a>
-        </span>
-
-        <ul id="menu">
-          <li href="#home" onclick="scrollToSection(this)"><a>Inicio</a></li>
-          <li href="#about_us" onclick="scrollToSection(this)"><a>A Empresa</a></li>
-          <li href="#services" onclick="scrollToSection(this)"><a>Serviços</a></li>
-          <li href="#stats" onclick="scrollToSection(this)"><a>Estatística</a></li>
-          <li href="#contact" onclick="scrollToSection(this)"><a>Contato</a></li>
-        </ul>
-
-        <div id="content-menu-mobile">
-          <div id="slide" class="slide" onclick="toggleSlideMenu()">
-            <div id="menu-btn" class="menu-btn">
-              <div class="menu-btn-burger"></div>
-            </div>
-          </div>
-    
-          <div id="menu-mobile" class="nav-mobile">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+      <div id="content-menu-mobile" class="hamburguerMenuMobile">
+        <div id="slide" class="slide" onclick="toggleSlideMenu()">
+          <div id="menu-btn" class="menu-btn">
+            <div class="menu-btn-burger"></div>
           </div>
         </div>
-      </nav>
 
-      <div id="resize">
-        <div class="close-btn">close</div>
-
-        <ul id="menu">
-          <li onclick="scrollToSection()"><a>Inicio</a></li>
-          <li onclick="scrollToSection()"><a>Sobre nós</a></li>
-          <li onclick="scrollToSection()"><a>Serviços</a></li>
-          <li onclick="scrollToSection()"><a>Estatística</a></li>
-          <li onclick="scrollToSection()"><a>Contato</a></li>
-        </ul>
+        <div id="menu-mobile" class="nav-mobile">
+          <a href="#home" onclick="scrollToSection(this)">Inicio</a>
+          <a href="#about_us" onclick="scrollToSection(this)">A Empresa</a>
+          <a href="#services" onclick="scrollToSection(this)">Serviços</a>
+          <a href="#stats" onclick="scrollToSection(this)">Estatística</a>
+          <a href="#contact" onclick="scrollToSection(this)">Contato</a>
+        </div>
       </div>
+    </nav>
 
-      <div class="content">
-        <a name="about"></a>
+    <div id="resize">
+      <div class="close-btn">close</div>
 
-        <section id="about_us" class="story">
-          <div class="container-fluid">
-            <div class="section-data">
-              <div class="row">
-                <div class="col-md-2"></div>
-                <div
-                  class="col-md-2 section-index wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  01
-                </div>
-                <div
-                  class="col-md-8 section-heading wow fadeInUp"
-                  data-wow-delay="0.4s"
-                >
-                  APRESENTAÇÃO GERAL
-                </div>
+      <ul id="menu">
+        <li onclick="scrollToSection()"><a>Inicio</a></li>
+        <li onclick="scrollToSection()"><a>Sobre nós</a></li>
+        <li onclick="scrollToSection()"><a>Serviços</a></li>
+        <li onclick="scrollToSection()"><a>Estatística</a></li>
+        <li onclick="scrollToSection()"><a>Contato</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <a name="about"></a>
+
+      <section id="about_us" class="story">
+        <div class="container-fluid">
+          <div class="section-data">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">
+                01
               </div>
-
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div
-                  class="col-md-6 section-subheading wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <h1>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus sapiente maxime a in consequatur ex tempora.
-                  </h1>
-                </div>
+              <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">
+                APRESENTAÇÃO GERAL
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div
-                  class="col-md-6 section-info wow fadeInUp"
-                  data-wow-delay="0.6s"
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  minima nam quasi quod eaque incidunt aliquid provident
-                  accusantium nemo aperiam, voluptatibus nulla ex repellendus ad
-                  doloremque nisi iure, ipsam neque iste voluptate quidem sit
-                  sed fugiat! Consequatur, aut vel. Voluptate?
-                </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-6 section-subheading wow fadeInUp" data-wow-delay="0.5s">
+                <h1>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus sapiente maxime a in consequatur ex tempora.
+                </h1>
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
-                  <button id="btn">CONHEÇA MAIS</button>
-                </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-6 section-info wow fadeInUp" data-wow-delay="0.6s">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                minima nam quasi quod eaque incidunt aliquid provident
+                accusantium nemo aperiam, voluptatibus nulla ex repellendus ad
+                doloremque nisi iure, ipsam neque iste voluptate quidem sit
+                sed fugiat! Consequatur, aut vel. Voluptate?
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
+                <button id="btn">CONHEÇA MAIS</button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <a name="services"></a>
-        <section id="services" class="services">
-          <div class="row carousel-container-services">
-            <div class="col-4"></div>
-            <div class="col-8 container-types-service">
-              <h1 class="col-9 text-center mt-5 section-heading">NOSSOS SERVIÇOS</h1>
-              <div class="col-9">
-                <h3>Solda</h3>
+      <a name="services"></a>
+      <section id="services" class="services">
+        <div class="row carousel-container-services">
+          <div class="col-4"></div>
+          <div class="col-8 container-types-service">
+            <h1 class="col-9 text-center mt-5 section-heading">NOSSOS SERVIÇOS</h1>
+            <div class="col-9">
+              <h3>Solda</h3>
+              <div>
+                <p>Especializada em soldas para montagem de cilindros, mancais, suportes. Utilizada também para reparos
+                  em manutenção de cilindros e eixos de diversos seguimentos da indústria. Os processos utilizados para
+                  tais serviços são:</p>
+                <ul>
+                  <li>Solda MIG/MAG</li>
+                  <li>Solda TIG</li>
+                  <li>Solda com Eletrodo Revestido</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-9">
+              <h3>Torno</h3>
+              <div>
+                <p>Especializada na usinagem de diversos tipos de peças cilíndricas, dentre as quais destacam-se as
+                  principais abaixo:</p>
                 <div>
-                  <p>Especializada em soldas para montagem de cilindros, mancais, suportes. Utilizada também para reparos em manutenção de cilindros e eixos de diversos seguimentos da indústria. Os processos utilizados para tais serviços são:</p>
                   <ul>
-                    <li>Solda MIG/MAG</li>
-                    <li>Solda TIG</li>
-                    <li>Solda com Eletrodo Revestido</li>
+                    <li>Eixos</li>
+                    <li>Cilindros</li>
+                    <li>Polias</li>
+                    <li>Buchas</li>
+                  </ul>
+                  <ul>
+                    <li>Pinos</li>
+                    <li>Flanges</li>
+                    <li>Fusos</li>
+                    <li>Roscas</li>
                   </ul>
                 </div>
               </div>
-              <div class="col-9">
-                <h3>Torno</h3>
+            </div>
+            <div class="col-9">
+              <h3>Fresa</h3>
+              <div>
+                <p>Especializada na usinagem de diversos tipos de peças prismáticas, dentre as quais destacam-se as
+                  principais abaixo:</p>
                 <div>
-                  <p>Especializada na usinagem de diversos tipos de peças cilíndricas, dentre as quais destacam-se as principais abaixo:</p>
-                  <div>
-                    <ul>
-                      <li>Eixos</li>
-                      <li>Cilindros</li>
-                      <li>Polias</li>
-                      <li>Buchas</li>
-                    </ul>
-                    <ul>
-                      <li>Pinos</li>
-                      <li>Flanges</li>
-                      <li>Fusos</li>
-                      <li>Roscas</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-9">
-                <h3>Fresa</h3>
-                <div>
-                  <p>Especializada na usinagem de diversos tipos de peças prismáticas, dentre as quais destacam-se as principais abaixo:</p>
-                  <div>
-                    <ul>
-                      <li>Mancal</li>
-                      <li>Suportes</li>
-                      <li>Canal de chaveta interno</li>
-                      <li>Canal de chaveta externo</li>
-                    </ul>
-                    <ul>
-                      <li>Furação em flange</li>
-                      <li>Engrenagem</li>
-                      <li>Rebaixos</li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-            </div>
-            <div class="col-12 carousel-slide-services">
-              <img src="/src/assets/images/solda.jpg" id="solda-background" alt="">
-            </div>
-        </section>
-
-        <a name="team"></a>
-
-        <section class="team">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div
-                class="col-md-2 section-index wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                03
-              </div>
-              <div
-                class="col-md-8 section-heading wow fadeInUp"
-                data-wow-delay="0.4s"
-              >
-                Nossa Equipe
-              </div>
-            </div>
-
-            <div class="row members">
-              <div class="carousel-container">
-                <img src="./src/assets/images/arrowLeft.svg" id="prevButton"></img>
-                <img src="./src/assets/images/arrowRight.svg" id="nextButton"></img>
-                <div class="carousel-slide">
-                  <img src="/src/assets/images/placeholder1.png" id="lastClone" alt="">
-                  <img src="/src/assets/images/placeholder1.png" alt="">
-                  <img src="/src/assets/images/placeholder1.png" alt="">
-                  <img src="/src/assets/images/placeholder1.png" id="firstClone" alt="">
+                  <ul>
+                    <li>Mancal</li>
+                    <li>Suportes</li>
+                    <li>Canal de chaveta interno</li>
+                    <li>Canal de chaveta externo</li>
+                  </ul>
+                  <ul>
+                    <li>Furação em flange</li>
+                    <li>Engrenagem</li>
+                    <li>Rebaixos</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+          <div class="col-12 carousel-slide-services">
+            <img src="/src/assets/images/solda.jpg" id="solda-background" alt="">
+          </div>
+      </section>
 
-        <section id="stats" class="newsletter">
-          <div class="container">
-            <div class="row newsletter-title">
-              <div class="col-md-12 text-center section-heading">
-                Nossas Estatística
+      <a name="team"></a>
+
+      <section class="team">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">
+              03
+            </div>
+            <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">
+              Nossa Equipe
+            </div>
+          </div>
+
+          <div class="row members">
+            <div class="carousel-container">
+              <img src="./src/assets/images/arrowLeft.svg" id="prevButton"></img>
+              <img src="./src/assets/images/arrowRight.svg" id="nextButton"></img>
+              <div class="carousel-slide">
+                <img src="/src/assets/images/placeholder1.png" id="lastClone" alt="">
+                <img src="/src/assets/images/placeholder1.png" alt="">
+                <img src="/src/assets/images/placeholder1.png" alt="">
+                <img src="/src/assets/images/placeholder1.png" id="firstClone" alt="">
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-4 stats-row">
-                <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                  xmlns:svg="http://www.w3.org/2000/svg"
-                  height="64"
-                  id="svg8"
-                  version="1.1"
-                  viewBox="0 0 16.933333 16.933333"
-                  width="64"
-                  class="center-svg"
-                >
-                  <defs id="defs2" />
-                  <g id="layer2">
-                    <path
-                      d="M 7.9375001,1.058349 C 7.71655,1.058349 7.51893,1.165145 7.3943801,1.306396 7.2698299,1.447647 7.201085,1.614725 7.154085,1.779235 L 6.8383421,2.88201 C 6.4415621,2.999756 6.037982,3.166268 5.672522,3.368286 L 4.665865,2.81018 C 4.5163051,2.72709 4.3499589,2.658178 4.1620201,2.646366 c -0.1879413,-0.01181 -0.40446,0.051 -0.56069,0.207222 l -0.747758,0.749826 c -0.15518,0.1561059 -0.219002,0.37126 -0.207222,0.5586221 0.0118,0.1879369 0.0807,0.354294 0.163814,0.5038449 l 0.558106,1.00769 c -0.19724,0.3627699 -0.367984,0.762358 -0.480074,1.1637539 L 1.779219,7.154101 c -0.16451,0.047 -0.3315889,0.1157459 -0.4728389,0.2402959 -0.14125,0.124547 -0.248047,0.322167 -0.248047,0.5431189 v 1.0583331 c 0,0.220953 0.106797,0.418571 0.248047,0.5431192 0.14125,0.1245478 0.3083289,0.1932929 0.4728389,0.2402959 l 1.1069091,0.31626 c 0.1160599,0.402317 0.2861089,0.799785 0.4842089,1.161169 l -0.5601729,1.010791 c -0.0831,0.149553 -0.152004,0.315907 -0.163814,0.503845 -0.0118,0.187938 0.051,0.402398 0.207222,0.558622 L 3.60133,14.078226 c 0.15623,0.156224 0.3727488,0.220585 0.5606901,0.208773 0.1879388,-0.01181 0.354285,-0.08073 0.5038449,-0.163814 l 1.008724,-0.559139 c 0.3618899,0.196758 0.7675088,0.370133 1.1627191,0.480074 l 0.3167769,1.11001 c 0.047,0.164511 0.1157449,0.331588 0.2402951,0.472839 0.1245499,0.141252 0.3221699,0.248047 0.54312,0.248047 h 1.0583327 c 0.2209602,-1e-6 0.4185791,-0.106795 0.5431192,-0.248047 0.12455,-0.141251 0.1932959,-0.308329 0.2402959,-0.472839 l 0.3157431,-1.105876 c 0.40598,-0.116212 0.804203,-0.287583 1.165303,-0.485242 l 1.007174,0.560173 c 0.14955,0.08309 0.315915,0.152003 0.503845,0.163814 0.18794,0.01181 0.402393,-0.05255 0.558622,-0.208773 l 0.748275,-0.748275 c 0.15623,-0.156226 0.220593,-0.370684 0.208773,-0.558622 -0.0118,-0.187938 -0.0807,-0.354293 -0.163815,-0.503845 l -0.558105,-1.00769 c 0.1976,-0.362916 0.364629,-0.767292 0.481108,-1.163754 l 1.107942,-0.316776 c 0.164511,-0.047 0.33159,-0.1157481 0.47284,-0.2402959 C 15.768213,9.4144189 15.875,9.2168019 15.875,8.9958489 V 7.9375158 c 0,-0.2209519 -0.106798,-0.4185719 -0.248047,-0.5431189 -0.14125,-0.12455 -0.308329,-0.1932919 -0.47284,-0.2402959 L 14.049788,6.8378408 C 13.934998,6.423102 13.764213,6.0357999 13.565063,5.6725381 L 14.123168,4.665881 c 0.0831,-0.149552 0.152005,-0.3159072 0.163815,-0.5038449 0.0118,-0.1873642 -0.0536,-0.4025162 -0.208773,-0.5586221 v -0.0021 L 13.329935,2.853556 C 13.173706,2.697332 12.959253,2.634522 12.771313,2.646334 c -0.18793,0.01181 -0.354295,0.08125 -0.503845,0.164331 L 11.261844,3.36722 C 10.899684,3.170466 10.490481,3.001632 10.094991,2.885596 L 9.779248,1.779203 C 9.732248,1.614693 9.6635021,1.447615 9.538952,1.306364 9.414412,1.165113 9.2167931,1.058317 8.9958328,1.058317 Z M 8.464599,4.232316 c 6.88e-4,0 0.0014,-1e-6 0.00209,0 6.88e-4,-1e-6 0.0014,0 0.00209,0 2.3348729,0 4.2322999,1.899494 4.2322999,4.2343659 0,2.3748421 -1.939748,4.2323001 -4.2323,4.2323001 h -0.00209 c -6.879e-4,10e-7 -0.0014,0 -0.00209,0 -2.292551,0 -4.232299,-1.857457 -4.232299,-4.2323001 0,-2.3348719 1.8974271,-4.2343659 4.232299,-4.2343659 z m 0,0.5291659 c -2.0488891,1e-6 -3.7031331,1.6680039 -3.7031331,3.7052 0,0.5833841 0.1344721,1.1276719 0.373621,1.6241911 C 5.4103999,9.3412928 6.170312,8.7312661 7.290511,8.7312661 h 2.352311 c 1.120198,0 1.88015,0.6100267 2.155424,1.3596069 0.239149,-0.4965181 0.37362,-1.040807 0.37362,-1.6241911 0,-2.0371961 -1.654243,-3.705199 -3.7031331,-3.7052 -6.879e-4,0 -0.0014,0 -0.00209,0 -6.88e-4,0 -0.0014,0 -0.00209,0 z m 0.00209,0.5296842 c 0.8005559,0 1.4552085,0.6541349 1.4552085,1.4546907 0,0.8005562 -0.6546526,1.4552091 -1.4552085,1.4552091 -0.8005551,0 -1.455208,-0.6546529 -1.455208,-1.4552091 0,-0.8005558 0.6546529,-1.4546907 1.455208,-1.4546907 z m 0,0.5291658 c -0.514572,0 -0.9260411,0.410953 -0.9260411,0.9255249 0,0.5145731 0.4114691,0.9281091 0.9260411,0.9281091 0.5145731,0 0.9260419,-0.413536 0.9260419,-0.9281091 0,-0.5145719 -0.4114689,-0.9255249 -0.9260419,-0.9255249 z m -1.1761454,3.4401 c -0.3413649,0 -0.616476,0.06358 -0.8557619,0.1757 0.2068009,0.2300179 0.372369,0.5471459 0.4211632,0.8821171 h 1.345137 V 10.159602 L 7.4708939,9.2604319 Z m 0.8671301,0 0.3090251,0.3844729 0.3090249,-0.3844729 z m 1.3048301,0 -0.7301877,0.8991701 v 0.158647 h 1.3451379 c 0.04879,-0.3349712 0.214361,-0.6520992 0.421163,-0.8821171 -0.239287,-0.1121259 -0.5143984,-0.1757 -0.8557619,-0.1757 z m -3.47679,0.4759399 C 5.7012209,10.015041 5.5562829,10.368769 5.5562829,10.685668 v 0.07183 c 0.2261449,0.286951 0.4928672,0.539663 0.793233,0.748791 v -0.904854 c 0,-0.344794 -0.1439831,-0.654308 -0.3638021,-0.8650632 z m 4.9619712,0 c -0.219819,0.2107563 -0.363802,0.5202702 -0.363802,0.8650642 v 0.904854 c 0.300365,-0.209128 0.567087,-0.46184 0.793233,-0.748791 v -0.07183 c 0,-0.316898 -0.144938,-0.670628 -0.429431,-0.9492972 z M 6.8786828,10.847932 v 0.962732 c 0.40577,0.19236 0.8511633,0.317792 1.3223991,0.350883 v -1.313615 z m 1.8536333,0 v 1.313615 c 0.4712348,-0.03309 0.9166288,-0.158523 1.3223999,-0.350883 v -0.962732 z"
-                      id="path1656"
-                      style="
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="newsletter">
+        <div class="container">
+          <div class="row newsletter-title">
+            <div class="col-md-12 text-center section-heading">
+              Nossas Estatística
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 stats-row">
+              <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg" height="64" id="svg8" version="1.1"
+                viewBox="0 0 16.933333 16.933333" width="64" class="center-svg">
+                <defs id="defs2" />
+                <g id="layer2">
+                  <path
+                    d="M 7.9375001,1.058349 C 7.71655,1.058349 7.51893,1.165145 7.3943801,1.306396 7.2698299,1.447647 7.201085,1.614725 7.154085,1.779235 L 6.8383421,2.88201 C 6.4415621,2.999756 6.037982,3.166268 5.672522,3.368286 L 4.665865,2.81018 C 4.5163051,2.72709 4.3499589,2.658178 4.1620201,2.646366 c -0.1879413,-0.01181 -0.40446,0.051 -0.56069,0.207222 l -0.747758,0.749826 c -0.15518,0.1561059 -0.219002,0.37126 -0.207222,0.5586221 0.0118,0.1879369 0.0807,0.354294 0.163814,0.5038449 l 0.558106,1.00769 c -0.19724,0.3627699 -0.367984,0.762358 -0.480074,1.1637539 L 1.779219,7.154101 c -0.16451,0.047 -0.3315889,0.1157459 -0.4728389,0.2402959 -0.14125,0.124547 -0.248047,0.322167 -0.248047,0.5431189 v 1.0583331 c 0,0.220953 0.106797,0.418571 0.248047,0.5431192 0.14125,0.1245478 0.3083289,0.1932929 0.4728389,0.2402959 l 1.1069091,0.31626 c 0.1160599,0.402317 0.2861089,0.799785 0.4842089,1.161169 l -0.5601729,1.010791 c -0.0831,0.149553 -0.152004,0.315907 -0.163814,0.503845 -0.0118,0.187938 0.051,0.402398 0.207222,0.558622 L 3.60133,14.078226 c 0.15623,0.156224 0.3727488,0.220585 0.5606901,0.208773 0.1879388,-0.01181 0.354285,-0.08073 0.5038449,-0.163814 l 1.008724,-0.559139 c 0.3618899,0.196758 0.7675088,0.370133 1.1627191,0.480074 l 0.3167769,1.11001 c 0.047,0.164511 0.1157449,0.331588 0.2402951,0.472839 0.1245499,0.141252 0.3221699,0.248047 0.54312,0.248047 h 1.0583327 c 0.2209602,-1e-6 0.4185791,-0.106795 0.5431192,-0.248047 0.12455,-0.141251 0.1932959,-0.308329 0.2402959,-0.472839 l 0.3157431,-1.105876 c 0.40598,-0.116212 0.804203,-0.287583 1.165303,-0.485242 l 1.007174,0.560173 c 0.14955,0.08309 0.315915,0.152003 0.503845,0.163814 0.18794,0.01181 0.402393,-0.05255 0.558622,-0.208773 l 0.748275,-0.748275 c 0.15623,-0.156226 0.220593,-0.370684 0.208773,-0.558622 -0.0118,-0.187938 -0.0807,-0.354293 -0.163815,-0.503845 l -0.558105,-1.00769 c 0.1976,-0.362916 0.364629,-0.767292 0.481108,-1.163754 l 1.107942,-0.316776 c 0.164511,-0.047 0.33159,-0.1157481 0.47284,-0.2402959 C 15.768213,9.4144189 15.875,9.2168019 15.875,8.9958489 V 7.9375158 c 0,-0.2209519 -0.106798,-0.4185719 -0.248047,-0.5431189 -0.14125,-0.12455 -0.308329,-0.1932919 -0.47284,-0.2402959 L 14.049788,6.8378408 C 13.934998,6.423102 13.764213,6.0357999 13.565063,5.6725381 L 14.123168,4.665881 c 0.0831,-0.149552 0.152005,-0.3159072 0.163815,-0.5038449 0.0118,-0.1873642 -0.0536,-0.4025162 -0.208773,-0.5586221 v -0.0021 L 13.329935,2.853556 C 13.173706,2.697332 12.959253,2.634522 12.771313,2.646334 c -0.18793,0.01181 -0.354295,0.08125 -0.503845,0.164331 L 11.261844,3.36722 C 10.899684,3.170466 10.490481,3.001632 10.094991,2.885596 L 9.779248,1.779203 C 9.732248,1.614693 9.6635021,1.447615 9.538952,1.306364 9.414412,1.165113 9.2167931,1.058317 8.9958328,1.058317 Z M 8.464599,4.232316 c 6.88e-4,0 0.0014,-1e-6 0.00209,0 6.88e-4,-1e-6 0.0014,0 0.00209,0 2.3348729,0 4.2322999,1.899494 4.2322999,4.2343659 0,2.3748421 -1.939748,4.2323001 -4.2323,4.2323001 h -0.00209 c -6.879e-4,10e-7 -0.0014,0 -0.00209,0 -2.292551,0 -4.232299,-1.857457 -4.232299,-4.2323001 0,-2.3348719 1.8974271,-4.2343659 4.232299,-4.2343659 z m 0,0.5291659 c -2.0488891,1e-6 -3.7031331,1.6680039 -3.7031331,3.7052 0,0.5833841 0.1344721,1.1276719 0.373621,1.6241911 C 5.4103999,9.3412928 6.170312,8.7312661 7.290511,8.7312661 h 2.352311 c 1.120198,0 1.88015,0.6100267 2.155424,1.3596069 0.239149,-0.4965181 0.37362,-1.040807 0.37362,-1.6241911 0,-2.0371961 -1.654243,-3.705199 -3.7031331,-3.7052 -6.879e-4,0 -0.0014,0 -0.00209,0 -6.88e-4,0 -0.0014,0 -0.00209,0 z m 0.00209,0.5296842 c 0.8005559,0 1.4552085,0.6541349 1.4552085,1.4546907 0,0.8005562 -0.6546526,1.4552091 -1.4552085,1.4552091 -0.8005551,0 -1.455208,-0.6546529 -1.455208,-1.4552091 0,-0.8005558 0.6546529,-1.4546907 1.455208,-1.4546907 z m 0,0.5291658 c -0.514572,0 -0.9260411,0.410953 -0.9260411,0.9255249 0,0.5145731 0.4114691,0.9281091 0.9260411,0.9281091 0.5145731,0 0.9260419,-0.413536 0.9260419,-0.9281091 0,-0.5145719 -0.4114689,-0.9255249 -0.9260419,-0.9255249 z m -1.1761454,3.4401 c -0.3413649,0 -0.616476,0.06358 -0.8557619,0.1757 0.2068009,0.2300179 0.372369,0.5471459 0.4211632,0.8821171 h 1.345137 V 10.159602 L 7.4708939,9.2604319 Z m 0.8671301,0 0.3090251,0.3844729 0.3090249,-0.3844729 z m 1.3048301,0 -0.7301877,0.8991701 v 0.158647 h 1.3451379 c 0.04879,-0.3349712 0.214361,-0.6520992 0.421163,-0.8821171 -0.239287,-0.1121259 -0.5143984,-0.1757 -0.8557619,-0.1757 z m -3.47679,0.4759399 C 5.7012209,10.015041 5.5562829,10.368769 5.5562829,10.685668 v 0.07183 c 0.2261449,0.286951 0.4928672,0.539663 0.793233,0.748791 v -0.904854 c 0,-0.344794 -0.1439831,-0.654308 -0.3638021,-0.8650632 z m 4.9619712,0 c -0.219819,0.2107563 -0.363802,0.5202702 -0.363802,0.8650642 v 0.904854 c 0.300365,-0.209128 0.567087,-0.46184 0.793233,-0.748791 v -0.07183 c 0,-0.316898 -0.144938,-0.670628 -0.429431,-0.9492972 z M 6.8786828,10.847932 v 0.962732 c 0.40577,0.19236 0.8511633,0.317792 1.3223991,0.350883 v -1.313615 z m 1.8536333,0 v 1.313615 c 0.4712348,-0.03309 0.9166288,-0.158523 1.3223999,-0.350883 v -0.962732 z"
+                    id="path1656" style="
                         opacity: 1;
                         fill: #ffffff;
                         fill-opacity: 1;
@@ -264,38 +236,27 @@
                         stroke-dasharray: none;
                         stroke-dashoffset: 0;
                         stroke-opacity: 1;
-                      "
-                    />
-                  </g>
-                </svg>
-                <h3 class="wt text-center text-white">Clientes Atendidos: </h3>
-                <h3 class="wt text-center text-white" id="stats-one-number">
-                  0
-                </h3>
-              </div>
-              <div class="col-md-4 stats-row">
-                <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                  xmlns:svg="http://www.w3.org/2000/svg"
-                  height="64"
-                  id="svg8"
-                  version="1.1"
-                  viewBox="0 0 16.933333 16.933333"
-                  width="64"
-                  class="center-svg"
-                >
-                  <defs id="defs2" />
-                  <g id="layer2">
-                    <path
-                      d="M 7.937503,1.058333 C 7.71655,1.058333 7.5189308,1.165129 7.3943838,1.30638 7.2698359,1.447631 7.2010929,1.6147089 7.1540879,1.7792189 L 6.838345,2.881994 C 6.4415658,2.99974 6.0379778,3.1662519 5.6725249,3.3682699 L 4.6658679,2.810164 C 4.5163159,2.727074 4.349961,2.658162 4.162023,2.64635 3.9740849,2.63454 3.7575589,2.69735 3.6013339,2.853572 l -0.747758,0.7498249 c -0.155179,0.1561069 -0.218999,0.371261 -0.207223,0.5586231 0.01181,0.1879359 0.08073,0.354294 0.163814,0.5038449 l 0.558106,1.00769 C 3.1710279,6.0363248 3.0002899,6.4359128 2.8881989,6.837308 l -1.108976,0.3167769 c -0.164511,0.047 -0.331588,0.1157459 -0.47284,0.2402951 -0.141251,0.1245478 -0.248048,0.3221677 -0.248047,0.54312 v 1.0583327 c 0,0.2209531 0.106796,0.4185722 0.248047,0.5431192 0.141252,0.1245479 0.30833,0.1932919 0.47284,0.2402959 l 1.106909,0.3162592 c 0.11606,0.402317 0.286106,0.799786 0.484208,1.16117 l -0.560173,1.010791 c -0.08309,0.149553 -0.152002,0.315907 -0.163814,0.503845 -0.01181,0.187938 0.051,0.402398 0.207223,0.558622 l 0.747758,0.748275 c 0.1562261,0.156224 0.3727521,0.220585 0.5606891,0.208773 0.1879369,-0.01181 0.354294,-0.08073 0.5038449,-0.163815 l 1.008724,-0.559138 c 0.3618888,0.196757 0.767512,0.370133 1.1627199,0.480074 l 0.04134,0.144694 V 9.0997029 C 5.8849758,8.5253258 5.2917128,7.4650549 5.2911519,6.3494827 5.2914694,4.9653399 6.1933649,3.7375198 7.5137548,3.3222779 c 0.04676,-0.01514 0.09557,-0.02361 0.144694,-0.02532 0.297666,-0.0077 0.5427472,0.231401 0.542603,0.529167 v 2.25981 H 8.730219 V 3.8302589 C 8.729209,3.4715598 9.0782357,3.2157398 9.4200988,3.3243468 10.739404,3.7392478 11.641035,4.966475 11.642701,6.3494848 v 0.00209 c -0.0014,1.1149999 -0.594608,2.178456 -1.588017,2.7481529 v 5.0896113 l 0.04031,-0.141076 c 0.405978,-0.116212 0.804207,-0.287582 1.165304,-0.485242 l 1.007173,0.560172 c 0.149553,0.08309 0.315908,0.152004 0.503845,0.163815 0.187938,0.01181 0.402398,-0.05255 0.558623,-0.208773 l 0.748274,-0.748275 c 0.156226,-0.156225 0.220585,-0.370684 0.208773,-0.558622 -0.01181,-0.187938 -0.08073,-0.354293 -0.163814,-0.503845 l -0.558106,-1.00769 c 0.197598,-0.362917 0.364628,-0.767292 0.481108,-1.163754 l 1.107943,-0.3167763 c 0.164509,-0.047 0.331588,-0.1157481 0.47284,-0.2402959 0.14125,-0.1245492 0.24805,-0.3221659 0.24804,-0.543119 v -1.058333 c 0,-0.220952 -0.10679,-0.4185722 -0.24804,-0.54312 C 15.485705,7.2698559 15.318627,7.201114 15.154117,7.15411 L 14.049791,6.8378501 C 13.935002,6.423111 13.764216,6.0358091 13.565066,5.6725471 l 0.558106,-1.006657 c 0.08309,-0.1495521 0.152002,-0.315907 0.163814,-0.503845 0.01178,-0.1873649 -0.05359,-0.4025169 -0.208773,-0.5586231 v -0.0021 L 13.329939,2.8535641 c -0.156225,-0.156225 -0.370685,-0.219034 -0.558623,-0.207222 -0.187937,0.01181 -0.354293,0.08125 -0.503845,0.164331 L 11.261848,3.367228 C 10.899694,3.1704829 10.490478,3.0016499 10.094994,2.885614 L 9.7792519,1.779221 C 9.7322519,1.614711 9.6635049,1.447633 9.5389557,1.306382 9.414409,1.165131 9.2167888,1.058335 8.9958368,1.058335 Z M 7.6729199,3.82664 c -1.102047,0.3465769 -1.85182,1.3681008 -1.8520841,2.5233597 5.292e-4,1.0515621 0.6237272,2.002999 1.5875,2.4236241 V 15.08125 c 0,0.439738 0.354013,0.79375 0.79375,0.79375 h 0.5291671 c 0.439737,0 0.79375,-0.354012 0.79375,-0.79375 V 8.7715569 C 10.488088,8.3512329 11.111156,7.4008109 11.112502,6.3499997 11.1111,5.1956938 10.361557,4.175514 9.2604199,3.8292228 v 2.5207769 c 0,0.1465792 -0.118005,0.2645831 -0.2645842,0.2645831 H 7.937503 c -0.1465792,0 -0.2645831,-0.1180039 -0.2645831,-0.2645831 z m 4.5635441,3.2556147 c 0.118593,-0.0055 0.226338,0.06865 0.26355,0.1813841 0.132829,0.387001 0.198954,0.7938661 0.198954,1.203027 2e-6,1.264222 -0.644893,2.4409922 -1.710489,3.1212572 -0.30453,0.225953 -0.617015,-0.265582 -0.283187,-0.445451 0.913904,-0.583425 1.464511,-1.5915522 1.46451,-2.6758062 0,-0.3507121 -0.05771,-0.699227 -0.171566,-1.0309439 -0.06007,-0.168007 0.05996,-0.346094 0.238228,-0.3534672 z m -7.547858,0.00101 h 5.291e-4 c 0.181197,0.0032 0.3056671,0.183419 0.24443,0.353984 -0.113593,0.331375 -0.1720831,0.6790901 -0.172082,1.0293939 0,1.0829351 0.552914,2.0899594 1.4650259,2.6737394 0.3126401,0.186603 0.015031,0.651347 -0.2852539,0.445451 -1.0635231,-0.68068 -1.708939,-1.8565023 -1.708939,-3.1191904 -1e-6,-0.4086849 0.06901,-0.8143578 0.2015379,-1.2009598 0.03276,-0.100956 0.122682,-0.1725642 0.22841,-0.1819011 0.0088,-6.085e-4 0.01756,-7.937e-4 0.02635,-5.291e-4 z m 3.7744457,2.1724771 c 0.1491731,-0.00151 0.2700732,0.1205989 0.267168,0.2697509 v 3.9687503 c 0.008,0.360692 -0.53717,0.360692 -0.5291669,0 V 9.5254881 C 8.198153,9.378362 8.3159047,9.2571612 8.4630517,9.2557372 Z m 0.0036,5.5609012 a 0.26458332,0.26458332 0 0 1 0.264583,0.264584 0.26458332,0.26458332 0 0 1 -0.264583,0.264583 0.26458332,0.26458332 0 0 1 -0.2645841,-0.264583 0.26458332,0.26458332 0 0 1 0.2645841,-0.264584 z"
-                      id="path1834"
-                      style="
+                      " />
+                </g>
+              </svg>
+              <h3 class="wt text-center text-white">Clientes Atendidos: </h3>
+              <h3 class="wt text-center text-white" id="stats-one-number">
+                0
+              </h3>
+            </div>
+            <div class="col-md-4 stats-row">
+              <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg" height="64" id="svg8" version="1.1"
+                viewBox="0 0 16.933333 16.933333" width="64" class="center-svg">
+                <defs id="defs2" />
+                <g id="layer2">
+                  <path
+                    d="M 7.937503,1.058333 C 7.71655,1.058333 7.5189308,1.165129 7.3943838,1.30638 7.2698359,1.447631 7.2010929,1.6147089 7.1540879,1.7792189 L 6.838345,2.881994 C 6.4415658,2.99974 6.0379778,3.1662519 5.6725249,3.3682699 L 4.6658679,2.810164 C 4.5163159,2.727074 4.349961,2.658162 4.162023,2.64635 3.9740849,2.63454 3.7575589,2.69735 3.6013339,2.853572 l -0.747758,0.7498249 c -0.155179,0.1561069 -0.218999,0.371261 -0.207223,0.5586231 0.01181,0.1879359 0.08073,0.354294 0.163814,0.5038449 l 0.558106,1.00769 C 3.1710279,6.0363248 3.0002899,6.4359128 2.8881989,6.837308 l -1.108976,0.3167769 c -0.164511,0.047 -0.331588,0.1157459 -0.47284,0.2402951 -0.141251,0.1245478 -0.248048,0.3221677 -0.248047,0.54312 v 1.0583327 c 0,0.2209531 0.106796,0.4185722 0.248047,0.5431192 0.141252,0.1245479 0.30833,0.1932919 0.47284,0.2402959 l 1.106909,0.3162592 c 0.11606,0.402317 0.286106,0.799786 0.484208,1.16117 l -0.560173,1.010791 c -0.08309,0.149553 -0.152002,0.315907 -0.163814,0.503845 -0.01181,0.187938 0.051,0.402398 0.207223,0.558622 l 0.747758,0.748275 c 0.1562261,0.156224 0.3727521,0.220585 0.5606891,0.208773 0.1879369,-0.01181 0.354294,-0.08073 0.5038449,-0.163815 l 1.008724,-0.559138 c 0.3618888,0.196757 0.767512,0.370133 1.1627199,0.480074 l 0.04134,0.144694 V 9.0997029 C 5.8849758,8.5253258 5.2917128,7.4650549 5.2911519,6.3494827 5.2914694,4.9653399 6.1933649,3.7375198 7.5137548,3.3222779 c 0.04676,-0.01514 0.09557,-0.02361 0.144694,-0.02532 0.297666,-0.0077 0.5427472,0.231401 0.542603,0.529167 v 2.25981 H 8.730219 V 3.8302589 C 8.729209,3.4715598 9.0782357,3.2157398 9.4200988,3.3243468 10.739404,3.7392478 11.641035,4.966475 11.642701,6.3494848 v 0.00209 c -0.0014,1.1149999 -0.594608,2.178456 -1.588017,2.7481529 v 5.0896113 l 0.04031,-0.141076 c 0.405978,-0.116212 0.804207,-0.287582 1.165304,-0.485242 l 1.007173,0.560172 c 0.149553,0.08309 0.315908,0.152004 0.503845,0.163815 0.187938,0.01181 0.402398,-0.05255 0.558623,-0.208773 l 0.748274,-0.748275 c 0.156226,-0.156225 0.220585,-0.370684 0.208773,-0.558622 -0.01181,-0.187938 -0.08073,-0.354293 -0.163814,-0.503845 l -0.558106,-1.00769 c 0.197598,-0.362917 0.364628,-0.767292 0.481108,-1.163754 l 1.107943,-0.3167763 c 0.164509,-0.047 0.331588,-0.1157481 0.47284,-0.2402959 0.14125,-0.1245492 0.24805,-0.3221659 0.24804,-0.543119 v -1.058333 c 0,-0.220952 -0.10679,-0.4185722 -0.24804,-0.54312 C 15.485705,7.2698559 15.318627,7.201114 15.154117,7.15411 L 14.049791,6.8378501 C 13.935002,6.423111 13.764216,6.0358091 13.565066,5.6725471 l 0.558106,-1.006657 c 0.08309,-0.1495521 0.152002,-0.315907 0.163814,-0.503845 0.01178,-0.1873649 -0.05359,-0.4025169 -0.208773,-0.5586231 v -0.0021 L 13.329939,2.8535641 c -0.156225,-0.156225 -0.370685,-0.219034 -0.558623,-0.207222 -0.187937,0.01181 -0.354293,0.08125 -0.503845,0.164331 L 11.261848,3.367228 C 10.899694,3.1704829 10.490478,3.0016499 10.094994,2.885614 L 9.7792519,1.779221 C 9.7322519,1.614711 9.6635049,1.447633 9.5389557,1.306382 9.414409,1.165131 9.2167888,1.058335 8.9958368,1.058335 Z M 7.6729199,3.82664 c -1.102047,0.3465769 -1.85182,1.3681008 -1.8520841,2.5233597 5.292e-4,1.0515621 0.6237272,2.002999 1.5875,2.4236241 V 15.08125 c 0,0.439738 0.354013,0.79375 0.79375,0.79375 h 0.5291671 c 0.439737,0 0.79375,-0.354012 0.79375,-0.79375 V 8.7715569 C 10.488088,8.3512329 11.111156,7.4008109 11.112502,6.3499997 11.1111,5.1956938 10.361557,4.175514 9.2604199,3.8292228 v 2.5207769 c 0,0.1465792 -0.118005,0.2645831 -0.2645842,0.2645831 H 7.937503 c -0.1465792,0 -0.2645831,-0.1180039 -0.2645831,-0.2645831 z m 4.5635441,3.2556147 c 0.118593,-0.0055 0.226338,0.06865 0.26355,0.1813841 0.132829,0.387001 0.198954,0.7938661 0.198954,1.203027 2e-6,1.264222 -0.644893,2.4409922 -1.710489,3.1212572 -0.30453,0.225953 -0.617015,-0.265582 -0.283187,-0.445451 0.913904,-0.583425 1.464511,-1.5915522 1.46451,-2.6758062 0,-0.3507121 -0.05771,-0.699227 -0.171566,-1.0309439 -0.06007,-0.168007 0.05996,-0.346094 0.238228,-0.3534672 z m -7.547858,0.00101 h 5.291e-4 c 0.181197,0.0032 0.3056671,0.183419 0.24443,0.353984 -0.113593,0.331375 -0.1720831,0.6790901 -0.172082,1.0293939 0,1.0829351 0.552914,2.0899594 1.4650259,2.6737394 0.3126401,0.186603 0.015031,0.651347 -0.2852539,0.445451 -1.0635231,-0.68068 -1.708939,-1.8565023 -1.708939,-3.1191904 -1e-6,-0.4086849 0.06901,-0.8143578 0.2015379,-1.2009598 0.03276,-0.100956 0.122682,-0.1725642 0.22841,-0.1819011 0.0088,-6.085e-4 0.01756,-7.937e-4 0.02635,-5.291e-4 z m 3.7744457,2.1724771 c 0.1491731,-0.00151 0.2700732,0.1205989 0.267168,0.2697509 v 3.9687503 c 0.008,0.360692 -0.53717,0.360692 -0.5291669,0 V 9.5254881 C 8.198153,9.378362 8.3159047,9.2571612 8.4630517,9.2557372 Z m 0.0036,5.5609012 a 0.26458332,0.26458332 0 0 1 0.264583,0.264584 0.26458332,0.26458332 0 0 1 -0.264583,0.264583 0.26458332,0.26458332 0 0 1 -0.2645841,-0.264583 0.26458332,0.26458332 0 0 1 0.2645841,-0.264584 z"
+                    id="path1834" style="
                         opacity: 1;
                         fill: #ffffff;
                         fill-opacity: 1;
@@ -307,38 +268,27 @@
                         stroke-dasharray: none;
                         stroke-dashoffset: 0;
                         stroke-opacity: 1;
-                      "
-                    />
-                  </g>
-                </svg>
-                <h3 class="wt text-center text-white">Anos de serviço: </h3>
-                <h3 class="wt text-center text-white" id="stats-two-number">
-                  0
-                </h3>
-              </div>
-              <div class="col-md-4 stats-row">
-                <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                  xmlns:svg="http://www.w3.org/2000/svg"
-                  height="64"
-                  id="svg8"
-                  version="1.1"
-                  viewBox="0 0 16.933333 16.933333"
-                  width="64"
-                  class="center-svg"
-                >
-                  <defs id="defs2" />
-                  <g id="layer2">
-                    <path
-                      d="m 7.9377619,1.058349 c -0.2885821,0 -0.5291662,0.2405751 -0.5291662,0.5291671 v 0.79375 c 0.8814272,8.969e-4 1.2352391,8.599e-4 2.1166662,0 v -0.79375 c 0,-0.288592 -0.240584,-0.5291671 -0.529166,-0.5291671 z M 6.8799458,1.881038 C 5.8123778,2.3109241 4.9689679,3.164033 4.5415869,4.2323149 h 0.9487789 c 0.3450381,0.0077 0.3450381,0.521512 0,0.529167 H 4.4981789 c -0.444314,0 -0.7927171,0.3509863 -0.7927171,0.7953001 0,0.444314 0.3484031,0.7927168 0.7927171,0.7927168 h 7.9375001 c 0.444312,0 0.793233,-0.3484028 0.793233,-0.7927168 0,-0.4443139 -0.348921,-0.7953001 -0.793233,-0.7953001 h -0.992188 c -0.345037,-0.0076 -0.345037,-0.521511 0,-0.529167 h 0.946196 C 11.962645,3.164487 11.120234,2.3114271 10.053395,1.8815551 v 0.750858 0.01292 c -1.5e-5,0.146125 -0.1184632,0.264569 -0.2645833,0.264584 -0.8815908,8.732e-4 -1.7631859,8.996e-4 -2.6447998,0 C 6.9980939,2.9096262 6.8799598,2.7912562 6.8799458,2.6453332 v -0.01292 z m 0.7942659,1.5585611 h 1.5859501 a 0.26464844,0.26464844 0 1 1 0,0.5291669 H 7.6742117 a 0.26464844,0.26464844 0 0 1 0,-0.5291669 z m 0,0.7927158 h 1.5859501 a 0.26464844,0.26464844 0 0 1 0,0.529167 H 7.6742117 a 0.26464844,0.26464844 0 0 1 0,-0.529167 z m -2.5977738,2.382284 c 0,0 0,5.292e-4 0,5.292e-4 h 6.7804651 c 0,0 0,-5.292e-4 0,-5.292e-4 z m 0.05684,0.2640661 C 5.484986,8.2481919 6.721202,9.261466 8.2007911,9.261466 h 0.5291671 c 1.4796058,0 2.7178218,-1.013254 3.0700968,-2.3828009 z m 1.185974,2.9104168 2.147156,2.6799402 2.1471561,-2.6799402 H 8.4664079 Z m -0.6717932,0.0072 C 4.4398189,9.8313208 3.4511789,10.223159 2.703452,10.809656 c 0.7926359,0.661066 1.3427378,1.607021 1.4924158,2.682523 h 4.00544 v -0.509013 l -0.138493,-0.172599 a 0.52921957,0.52921957 0 0 1 -0.0098,-0.01188 L 5.9063757,10.119265 Z m 5.6378983,0 -0.248563,0.3105752 a 0.52921957,0.52921957 0 0 1 -0.0093,0.0124 l -0.993221,1.238683 -1.303796,1.627291 v 0.506946 h 4.008024 c 0.149607,-1.075491 0.69935,-2.020956 1.491898,-2.682007 -0.747911,-0.586854 -1.736828,-0.9789412 -2.94504,-1.01389 z M 2.2977919,11.157439 c -0.8090049,0.807911 -1.2392,1.865276 -1.2392,2.865975 v 1.588017 a 0.26460979,0.26461902 0 0 0 0.2635492,0.263549 h 2.3864177 v -1.78697 c 0,-1.192379 -0.5508749,-2.247884 -1.4107669,-2.930571 z m 12.3377481,0 c -0.859999,0.682687 -1.411283,1.738192 -1.411283,2.930571 v 1.78697 h 2.386934 a 0.26460979,0.26461902 0 0 0 0.26355,-0.263549 v -1.588017 c 0,-1.000699 -0.430195,-2.058064 -1.239201,-2.865975 z M 4.236692,14.023414 c 3.175e-4,0.02158 0.00209,0.04293 0.00209,0.0646 v 1.78697 h 3.9625489 v -1.851566 z m 4.493783,0 v 1.851566 h 3.965132 v -1.78697 c 0,-0.02166 0.0017,-0.04301 0.0021,-0.0646 z"
-                      id="path2208"
-                      style="
+                      " />
+                </g>
+              </svg>
+              <h3 class="wt text-center text-white">Anos de serviço: </h3>
+              <h3 class="wt text-center text-white" id="stats-two-number">
+                0
+              </h3>
+            </div>
+            <div class="col-md-4 stats-row">
+              <!-- SVG FROM - https://www.iconfinder.com/Aficons -->
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg" height="64" id="svg8" version="1.1"
+                viewBox="0 0 16.933333 16.933333" width="64" class="center-svg">
+                <defs id="defs2" />
+                <g id="layer2">
+                  <path
+                    d="m 7.9377619,1.058349 c -0.2885821,0 -0.5291662,0.2405751 -0.5291662,0.5291671 v 0.79375 c 0.8814272,8.969e-4 1.2352391,8.599e-4 2.1166662,0 v -0.79375 c 0,-0.288592 -0.240584,-0.5291671 -0.529166,-0.5291671 z M 6.8799458,1.881038 C 5.8123778,2.3109241 4.9689679,3.164033 4.5415869,4.2323149 h 0.9487789 c 0.3450381,0.0077 0.3450381,0.521512 0,0.529167 H 4.4981789 c -0.444314,0 -0.7927171,0.3509863 -0.7927171,0.7953001 0,0.444314 0.3484031,0.7927168 0.7927171,0.7927168 h 7.9375001 c 0.444312,0 0.793233,-0.3484028 0.793233,-0.7927168 0,-0.4443139 -0.348921,-0.7953001 -0.793233,-0.7953001 h -0.992188 c -0.345037,-0.0076 -0.345037,-0.521511 0,-0.529167 h 0.946196 C 11.962645,3.164487 11.120234,2.3114271 10.053395,1.8815551 v 0.750858 0.01292 c -1.5e-5,0.146125 -0.1184632,0.264569 -0.2645833,0.264584 -0.8815908,8.732e-4 -1.7631859,8.996e-4 -2.6447998,0 C 6.9980939,2.9096262 6.8799598,2.7912562 6.8799458,2.6453332 v -0.01292 z m 0.7942659,1.5585611 h 1.5859501 a 0.26464844,0.26464844 0 1 1 0,0.5291669 H 7.6742117 a 0.26464844,0.26464844 0 0 1 0,-0.5291669 z m 0,0.7927158 h 1.5859501 a 0.26464844,0.26464844 0 0 1 0,0.529167 H 7.6742117 a 0.26464844,0.26464844 0 0 1 0,-0.529167 z m -2.5977738,2.382284 c 0,0 0,5.292e-4 0,5.292e-4 h 6.7804651 c 0,0 0,-5.292e-4 0,-5.292e-4 z m 0.05684,0.2640661 C 5.484986,8.2481919 6.721202,9.261466 8.2007911,9.261466 h 0.5291671 c 1.4796058,0 2.7178218,-1.013254 3.0700968,-2.3828009 z m 1.185974,2.9104168 2.147156,2.6799402 2.1471561,-2.6799402 H 8.4664079 Z m -0.6717932,0.0072 C 4.4398189,9.8313208 3.4511789,10.223159 2.703452,10.809656 c 0.7926359,0.661066 1.3427378,1.607021 1.4924158,2.682523 h 4.00544 v -0.509013 l -0.138493,-0.172599 a 0.52921957,0.52921957 0 0 1 -0.0098,-0.01188 L 5.9063757,10.119265 Z m 5.6378983,0 -0.248563,0.3105752 a 0.52921957,0.52921957 0 0 1 -0.0093,0.0124 l -0.993221,1.238683 -1.303796,1.627291 v 0.506946 h 4.008024 c 0.149607,-1.075491 0.69935,-2.020956 1.491898,-2.682007 -0.747911,-0.586854 -1.736828,-0.9789412 -2.94504,-1.01389 z M 2.2977919,11.157439 c -0.8090049,0.807911 -1.2392,1.865276 -1.2392,2.865975 v 1.588017 a 0.26460979,0.26461902 0 0 0 0.2635492,0.263549 h 2.3864177 v -1.78697 c 0,-1.192379 -0.5508749,-2.247884 -1.4107669,-2.930571 z m 12.3377481,0 c -0.859999,0.682687 -1.411283,1.738192 -1.411283,2.930571 v 1.78697 h 2.386934 a 0.26460979,0.26461902 0 0 0 0.26355,-0.263549 v -1.588017 c 0,-1.000699 -0.430195,-2.058064 -1.239201,-2.865975 z M 4.236692,14.023414 c 3.175e-4,0.02158 0.00209,0.04293 0.00209,0.0646 v 1.78697 h 3.9625489 v -1.851566 z m 4.493783,0 v 1.851566 h 3.965132 v -1.78697 c 0,-0.02166 0.0017,-0.04301 0.0021,-0.0646 z"
+                    id="path2208" style="
                         color: #000000;
                         font-style: normal;
                         font-variant: normal;
@@ -398,126 +348,90 @@
                         shape-rendering: auto;
                         text-rendering: auto;
                         enable-background: accumulate;
-                      "
-                    />
-                  </g>
-                </svg>
-                <h3 class="wt text-center text-white">Peças feitas: </h3>
-                <h3 class="wt text-center text-white" id="stats-three-number">
-                  0
-                </h3>
-              </div>
+                      " />
+                </g>
+              </svg>
+              <h3 class="wt text-center text-white">Peças feitas: </h3>
+              <h3 class="wt text-center text-white" id="stats-three-number">
+                0
+              </h3>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <a id="contact" name="contact"></a>
+      <a id="contact" name="contact"></a>
 
-        <section class="contact">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div
-                class="col-md-2 section-index wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                04
-              </div>
-              <div
-                class="col-md-8 section-heading wow fadeInUp"
-                data-wow-delay="0.4s"
-              >
-                Entre em contato
-              </div>
+      <section class="contact">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">
+              04
             </div>
-
-            <div class="row">
-              <div class="col-md-4"></div>
-              <div
-                class="col-md-6 icon-title wow fadeInUp"
-                data-wow-delay="0.5s"
-              >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
-                aspernatur deleniti eveniet quisquam sapiente obcaecati
-                consequuntur.
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-6">
-                <form
-                  action="mailto:voigt.gustavoh@gmail.com" 
-                  method="post" 
-                  enctype="text/plain"
-                  name="contact-form"
-                  id="contact-form"
-                >
-                  <ul>
-                    <li class="wow fadeInUp" data-wow-delay="0.6s">
-                      <label for="contact-name">Nome :</label>
-                      <div class="textarea">
-                        <input
-                          type="text"
-                          name="contact-name"
-                          id="contact-name"
-                          value=""
-                          required
-                        />
-                      </div>
-                    </li>
-
-                    <br />
-
-                    <li class="wow fadeInUp" data-wow-delay="0.7s">
-                      <label for="contact-email">E-mail :</label>
-                      <div class="textarea">
-                        <input
-                          type="email"
-                          name="contact-email"
-                          id="contact-email"
-                          value=""
-                          required
-                        />
-                      </div>
-                    </li>
-
-                    <br />
-
-                    <li class="wow fadeInUp" data-wow-delay="0.8s">
-                      <label for="contact-project">Mensagem :</label>
-                      <div class="textarea">
-                        <textarea
-                          name="contact-project"
-                          id="contact-project"
-                          rows="6"
-                          required
-                        ></textarea>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <button
-                    type="submit"
-                    name="contact-submit"
-                    id="contact-submit"
-                    class="send wow fadeInUp"
-                    data-wow-delay="0.9s"
-                  >
-                    Enviar mensagem
-                  </button>
-                </form>
-              </div>
+            <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">
+              Entre em contato
             </div>
           </div>
-        </section>
 
-        <div class="footer">
-          <div class="container">
-            <div class="info">
-              <div class="row">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-6 icon-title wow fadeInUp" data-wow-delay="0.5s">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              aspernatur deleniti eveniet quisquam sapiente obcaecati
+              consequuntur.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-6">
+              <form action="mailto:voigt.gustavoh@gmail.com" method="post" enctype="text/plain" name="contact-form"
+                id="contact-form">
+                <ul>
+                  <li class="wow fadeInUp" data-wow-delay="0.6s">
+                    <label for="contact-name">Nome :</label>
+                    <div class="textarea">
+                      <input type="text" name="contact-name" id="contact-name" value="" required />
+                    </div>
+                  </li>
+
+                  <br />
+
+                  <li class="wow fadeInUp" data-wow-delay="0.7s">
+                    <label for="contact-email">E-mail :</label>
+                    <div class="textarea">
+                      <input type="email" name="contact-email" id="contact-email" value="" required />
+                    </div>
+                  </li>
+
+                  <br />
+
+                  <li class="wow fadeInUp" data-wow-delay="0.8s">
+                    <label for="contact-project">Mensagem :</label>
+                    <div class="textarea">
+                      <textarea name="contact-project" id="contact-project" rows="6" required></textarea>
+                    </div>
+                  </li>
+                </ul>
+
+                <button type="submit" name="contact-submit" id="contact-submit" class="send wow fadeInUp"
+                  data-wow-delay="0.9s">
+                  Enviar mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <div class="container">
+          <div class="info">
+            <div class="row">
               <div class="col-sm-12 col-md-5" id="address">
-                <p class="subtitle-footer">Para mais informações sobre nossos serviços e disponibilidade de atendimento entre em contato</p>
+                <p class="subtitle-footer">Para mais informações sobre nossos serviços e disponibilidade de atendimento
+                  entre em contato</p>
                 <div class="row-md-12 d-flex mb-2">
                   <img src="./src/assets/images/phone.svg" alt="" class="col-1 col-sm-1 col-md-1 phone-image">
                   <p class="col-md-10 text-image-footer">+55 (47) 3424-0135 </p>
@@ -528,7 +442,8 @@
                 </div>
                 <div class="row-md-12 d-flex mb-2">
                   <img src="./src/assets/images/location.svg" alt="" class="col-1 col-sm-1 col-md-1 phone-image">
-                  <p class="col-md-10 text-image-footer">R. Conselheiro Pedreira, 1232 - Pirabeiraba, Joinville - SC, 89239-200</p>
+                  <p class="col-md-10 text-image-footer">R. Conselheiro Pedreira, 1232 - Pirabeiraba, Joinville - SC,
+                    89239-200</p>
                 </div>
                 <div class="row-md-12 d-flex mt-4 social-media-icon">
                   <img src="./src/assets/images/facebook.svg" alt="" class="col-1 col-sm-1 col-md-1">
@@ -536,30 +451,17 @@
                 </div>
               </div>
               <div class="col-md-7" data-wow-delay="0.5s" id="maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14319.93154275005!2d-48.9104924!3d-26.197235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa4042f54784b2ed!2sMec%C3%A2nica%20Leme!5e0!3m2!1spt-BR!2sbr!4v1594576115804!5m2!1spt-BR!2sbr" class="map-footer" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14319.93154275005!2d-48.9104924!3d-26.197235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa4042f54784b2ed!2sMec%C3%A2nica%20Leme!5e0!3m2!1spt-BR!2sbr!4v1594576115804!5m2!1spt-BR!2sbr"
+                  class="map-footer" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                  tabindex="0"></iframe>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      var toggle = true;
-      const menu = document.getElementById("menu-mobile");
-      const slide = document.getElementById("slide");
-      const menuBtn = document.getElementById("menu-btn");
-      function toggleSlideMenu() {
-        if (toggle) {
-          menu.style.width = "100vw";
-          menuBtn.classList.add("open");
-          toggle = !toggle;
-        } else if (!toggle) {
-          menuBtn.classList.remove("open");
-          menu.style.width = "0vw";
-          toggle = !toggle;
-        }
-      }
-    </script>
     <script src="/src/script.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,5 +1,6 @@
 html {
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -66,6 +67,18 @@ video {
   }
 }
 
+@media (min-width: 768px) { 
+  .hamburguerMenuMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) { 
+  .hamburguerMenuMobile{
+    display: block;
+  }
+}
+
 /*--------------- navigation --------------- */
 
 .nav {
@@ -75,6 +88,7 @@ video {
   z-index: 20;
   background-color: unset;
   transition: ease-in-out 0.75s;
+  display: block;
 }
 
 .nav-scroll-color {
