@@ -1,4 +1,18 @@
 var navElement = document.getElementById("navElement");
+var toggle = true;
+const menu = document.getElementById("menu-mobile");
+const menuBtn = document.getElementById("menu-btn");
+function toggleSlideMenu() {
+  if (toggle) {
+    menu.style.width = "100vw";
+    menuBtn.classList.add("open");
+    toggle = !toggle;
+  } else if (!toggle) {
+    menuBtn.classList.remove("open");
+    menu.style.width = "0vw";
+    toggle = !toggle;
+  }
+}
 
 window.onscroll = function () {
   let yPosition = window.scrollY;
@@ -10,8 +24,11 @@ window.onscroll = function () {
 };
 
 function scrollToSection(e) {
+  menuBtn.classList.remove("open");
+  menu.style.width = "0vw";
+  toggle = false;
   document
-    .getElementById(e.getAttribute("href").substr(1))
+    .getElementById(e.getAttribute("data-direct").substr(1))
     .scrollIntoView({ behavior: "smooth" });
 }
 
@@ -20,7 +37,7 @@ window.onload = function () {
 };
 
 function isVisible() {
-  elementTop = document.getElementById("stats");
+  let elementTop = document.getElementById("stats");
   var rect = elementTop.getBoundingClientRect();
   var elemTop = rect.top;
   var elemBottom = rect.bottom;
@@ -59,35 +76,35 @@ const nextButton = document.querySelector("#nextButton");
 let counter = 1;
 let size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
 // Button Listeners
 
 nextButton.addEventListener("click", () => {
-  if (size == 0){
+  if (size === 0) {
     size = carouselImages[0].clientWidth;
   }
   if (counter >= carouselImages.length - 1) return;
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
   counter++;
-  carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 });
 
 prevButton.addEventListener("click", () => {
-  if (size == 0){
+  if (size === 0) {
     size = carouselImages[0].clientWidth;
   }
   if (counter <= 0) return;
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
   counter--;
-  carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 });
 
 carouselSlide.addEventListener("transitionend", () => {
   if (carouselImages[counter].id === "lastClone") {
     carouselSlide.style.transition = "none";
     counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   }
   if (carouselImages[counter].id === "firstClone") {
     carouselSlide.style.transition = "none";
