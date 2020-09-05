@@ -619,13 +619,14 @@ body {
 
 .container-services{
   position: relative;
+  padding-top: 100px;
   margin: 0;
   color: #fff;
 }
 
 .carousel-container-main {
   position: absolute;
-  top: calc(100% * 3);
+  top: calc(100% * 2);
 }
 
 .carousel-container-main > div {
@@ -634,7 +635,7 @@ body {
 
 .arrow-right-services {
   position: absolute;
-  top: calc(100% * 4);
+  top: calc(100% * 2);
   right: 25px;
   z-index: 10;
   width: 40px;
@@ -642,7 +643,7 @@ body {
 
 .arrow-left-services {
   position: absolute;
-  top: calc(100% * 4);
+  top: calc(100% * 2);
   left: 25px;
   z-index: 10;
   width: 40px;
