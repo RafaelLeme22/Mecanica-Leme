@@ -301,7 +301,7 @@ button {
 .services {
   background: #161616;
   padding: 0;
-  height: auto;
+  height: 100vh;
 }
 
 .service {
@@ -596,66 +596,81 @@ body {
   overflow-x: hidden;
 }
 
-.carousel-container-services{
+.container-services{
   position: relative;
   margin: 0;
   color: #fff;
 }
 
-.carousel-slide-services {
+.carousel-container-main {
+  position: absolute;
+  top: calc(100% * 3);
+}
+
+.carousel-container-main > div {
+  display: flex;
+}
+
+.arrow-right-services {
+  position: absolute;
+  top: calc(100% * 4);
+  right: 0;
+  z-index: 20;
+  width: 50px;
+}
+
+.arrow-left-services {
+  position: absolute;
+  top: calc(100% * 4);
+  left: 0;
+  z-index: 20;
+  width: 50px;
+}
+
+.carousel-container-main > div > span {
+  width: 100vw;
+  color: #fff;
+  padding-right: 5%;
+  padding-left: 5%;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.services {
+  position: relative;
+}
+
+.images-carousel-services{
   position: absolute;
   display: flex;
-  flex-direction: row;
-  height: 100%;
-  overflow: hidden;
-}
-.carousel-slide-services img{
-  opacity: 0.1;
-  width: 100%;
 }
 
-.container-types-service {
-  z-index: 10;
+.images-carousel-services > img {
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(40%) blur(5px);
+}
+
+.carousel-slide-services > span > h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.carousel-slide-services > span > div > p{
+  text-align: left;
+  font-size: 20px;
+}
+
+.carousel-slide-services > span > div > div {
   display: flex;
-  padding-right: 0;
-  flex-direction: column;
-  color: #fff;
+  justify-content: center;
 }
 
-.container-types-service > div{
-  display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  height: auto;
-  border-left: 1px solid;
-  flex-direction: row;
-  color: #fff;
-}
-
-.container-types-service > div > div{
-  display: flex;
-  flex-direction: column;
-}
-
-.container-types-service > div > div > p{
-  text-align: justify;
-}
-
-.container-types-service > div > div > div{
-  display: flex;
-  flex-direction: row;
-}
-
-.container-types-service > div > div > div > ul{
-  margin-right: 50px;
-  margin-left: 15px;
-}
-
-.container-types-service > div > div > ul{
-  margin-right: 50px;
-  margin-left: 15px;
-}
-
-.container-types-service > div > h3{
-  margin-right: 100px;
+.carousel-slide-services > span > div > div > p{
+  text-align: left;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10px;
 }
