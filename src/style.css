@@ -619,13 +619,14 @@ body {
 
 .container-services{
   position: relative;
+  padding-top: 100px;
   margin: 0;
   color: #fff;
 }
 
 .carousel-container-main {
   position: absolute;
-  top: calc(100% * 3);
+  top: calc(100% * 2);
 }
 
 .carousel-container-main > div {
@@ -634,18 +635,18 @@ body {
 
 .arrow-right-services {
   position: absolute;
-  top: calc(100% * 4);
-  right: 0;
-  z-index: 20;
-  width: 50px;
+  top: calc(100% * 2);
+  right: 25px;
+  z-index: 10;
+  width: 40px;
 }
 
 .arrow-left-services {
   position: absolute;
-  top: calc(100% * 4);
-  left: 0;
-  z-index: 20;
-  width: 50px;
+  top: calc(100% * 2);
+  left: 25px;
+  z-index: 10;
+  width: 40px;
 }
 
 .carousel-container-main > div > span {
@@ -694,4 +695,13 @@ body {
   border-radius: 5px;
   padding: 10px;
   margin: 10px 10px;
+}
+
+.send-button {
+  background: none;
+  transition: background 0.5s;
+}
+
+.send-button:hover {
+  background: rgb(236, 233, 233);
 }
