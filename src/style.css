@@ -67,14 +67,14 @@ video {
   }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .hamburguerMenuMobile {
     display: none;
   }
 }
 
-@media (max-width: 768px) { 
-  .hamburguerMenuMobile{
+@media (max-width: 768px) {
+  .hamburguerMenuMobile {
     display: block;
   }
 }
@@ -383,7 +383,7 @@ button {
   height: 500px;
 }
 
-.carousel-slide img{
+.carousel-slide img {
   width: 100%;
 }
 
@@ -449,6 +449,13 @@ button {
 .form-control:focus {
   box-shadow: none !important;
   border: none !important;
+}
+
+.statsIcons {
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  display: block;
 }
 
 ::placeholder {
@@ -584,7 +591,7 @@ textarea:focus {
   padding: 0;
 }
 
-.social-media-icon > img{
+.social-media-icon > img {
   padding: 0;
   margin-right: 20px;
 }
@@ -599,18 +606,18 @@ body::-webkit-scrollbar {
   width: 0.75em;
 }
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 body::-webkit-scrollbar-thumb {
-background-color: darkgrey;
-outline: 1px solid slategrey;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 
 body {
   overflow-x: hidden;
 }
 
-.carousel-container-services{
+.carousel-container-services {
   position: relative;
   margin: 0;
   color: #fff;
@@ -623,7 +630,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
-.carousel-slide-services img{
+.carousel-slide-services img {
   opacity: 0.1;
   width: 100%;
 }
@@ -636,7 +643,7 @@ body {
   color: #fff;
 }
 
-.container-types-service > div{
+.container-types-service > div {
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -646,30 +653,30 @@ body {
   color: #fff;
 }
 
-.container-types-service > div > div{
+.container-types-service > div > div {
   display: flex;
   flex-direction: column;
 }
 
-.container-types-service > div > div > p{
+.container-types-service > div > div > p {
   text-align: justify;
 }
 
-.container-types-service > div > div > div{
+.container-types-service > div > div > div {
   display: flex;
   flex-direction: row;
 }
 
-.container-types-service > div > div > div > ul{
+.container-types-service > div > div > div > ul {
   margin-right: 50px;
   margin-left: 15px;
 }
 
-.container-types-service > div > div > ul{
+.container-types-service > div > div > ul {
   margin-right: 50px;
   margin-left: 15px;
 }
 
-.container-types-service > div > h3{
+.container-types-service > div > h3 {
   margin-right: 100px;
 }
