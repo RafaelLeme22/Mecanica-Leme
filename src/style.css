@@ -695,3 +695,12 @@ body {
   padding: 10px;
   margin: 10px 10px;
 }
+
+.send-button {
+  background: none;
+  transition: background 0.5s;
+}
+
+.send-button:hover {
+  background: rgb(236, 233, 233);
+}
