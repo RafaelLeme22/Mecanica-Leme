@@ -12,6 +12,10 @@ html {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.get-to-carousel {
+  margin: auto;
+}
+
 /*--------------- hero section --------------- */
 
 .video-container {
@@ -707,15 +711,14 @@ body {
 }
 
 @media (max-width: 625px) {
-
-  .arrow-right-services{
-    top: calc(100% * 1.75);
+  .arrow-right-services {
+    top: calc(100% * 1.95);
     width: 20px;
     right: 5px;
   }
 
-  .arrow-left-services{
-    top: calc(100% * 1.75);
+  .arrow-left-services {
+    top: calc(100% * 1.95);
     width: 20px;
     left: 5px;
   }
@@ -724,7 +727,7 @@ body {
     top: calc(100% * 1.2);
   }
 
-  .carousel-container-main > div > div{
+  .carousel-container-main > div > div {
     padding: 2%;
   }
 
@@ -736,6 +739,5 @@ body {
 
   .carousel-slide-services > div > div > p {
     text-align: center;
-    font-size: 16px;
   }
 }
