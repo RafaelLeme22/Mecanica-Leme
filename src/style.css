@@ -81,6 +81,10 @@ video {
   .hamburguerMenuMobile {
     display: block;
   }
+
+  .images-carousel-services {
+    display: none;
+  }
 }
 
 /*--------------- navigation --------------- */
