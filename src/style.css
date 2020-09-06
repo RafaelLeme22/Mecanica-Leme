@@ -82,7 +82,7 @@ video {
 /*--------------- navigation --------------- */
 
 .nav {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   position: fixed;
   z-index: 20;
@@ -617,7 +617,7 @@ body {
   overflow-x: hidden;
 }
 
-.container-services{
+.container-services {
   position: relative;
   padding-top: 100px;
   margin: 0;
@@ -662,7 +662,7 @@ body {
   position: relative;
 }
 
-.images-carousel-services{
+.images-carousel-services {
   position: absolute;
   display: flex;
 }
@@ -679,7 +679,7 @@ body {
   text-align: left;
 }
 
-.carousel-slide-services > span > div > p{
+.carousel-slide-services > span > div > p {
   text-align: left;
   font-size: 20px;
 }
@@ -689,7 +689,7 @@ body {
   justify-content: center;
 }
 
-.carousel-slide-services > span > div > div > p{
+.carousel-slide-services > span > div > div > p {
   text-align: left;
   font-size: 18px;
   border-radius: 5px;
