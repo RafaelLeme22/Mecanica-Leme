@@ -649,7 +649,7 @@ body {
   width: 40px;
 }
 
-.carousel-container-main > div > span {
+.carousel-container-main > div > div {
   width: 100vw;
   color: #fff;
   padding-right: 5%;
@@ -673,23 +673,23 @@ body {
   filter: brightness(40%) blur(5px);
 }
 
-.carousel-slide-services > span > h3 {
+.carousel-slide-services > div > h3 {
   font-size: 40px;
   font-weight: bold;
   text-align: left;
 }
 
-.carousel-slide-services > span > div > p {
+.carousel-slide-services > div > div > p {
   text-align: left;
   font-size: 20px;
 }
 
-.carousel-slide-services > span > div > div {
+.carousel-slide-services > div > div > div {
   display: flex;
   justify-content: center;
 }
 
-.carousel-slide-services > span > div > div > p {
+.carousel-slide-services > div > div > div > p {
   text-align: left;
   font-size: 18px;
   border-radius: 5px;
@@ -704,4 +704,38 @@ body {
 
 .send-button:hover {
   background: rgb(236, 233, 233);
+}
+
+@media (max-width: 625px) {
+
+  .arrow-right-services{
+    top: calc(100% * 1.75);
+    width: 20px;
+    right: 5px;
+  }
+
+  .arrow-left-services{
+    top: calc(100% * 1.75);
+    width: 20px;
+    left: 5px;
+  }
+
+  .carousel-container-main {
+    top: calc(100% * 1.2);
+  }
+
+  .carousel-container-main > div > div{
+    padding: 2%;
+  }
+
+  .carousel-slide-services > div > h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .carousel-slide-services > div > div > p {
+    text-align: center;
+    font-size: 16px;
+  }
 }

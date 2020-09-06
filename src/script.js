@@ -116,7 +116,8 @@ carouselSlide.addEventListener("transitionend", () => {
 // SERVICES CAROUSEL
 
 const carouselSlide2 = document.querySelector(".carousel-slide-services");
-const carouselImages2 = document.querySelectorAll(".carousel-slide-services span");
+const carouselImages2 = document.querySelectorAll(".get-to-carousel");
+console.log(carouselImages2)
 
 const carouselSlide3 = document.querySelector(".images-carousel-services");
 const carouselImages3 = document.querySelectorAll(".images-carousel-services img");
