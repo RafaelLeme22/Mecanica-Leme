@@ -613,10 +613,6 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .container-services {
   position: relative;
   padding-top: 100px;
@@ -707,6 +703,10 @@ body {
 }
 
 @media (max-width: 625px) {
+
+  .images-carousel-services > img {
+   display: none;
+  }
 
   .arrow-right-services{
     top: calc(100% * 1.75);
