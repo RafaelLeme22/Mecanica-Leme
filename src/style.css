@@ -12,6 +12,10 @@ html {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.get-to-carousel {
+  margin: auto;
+}
+
 /*--------------- hero section --------------- */
 
 .video-container {
@@ -76,6 +80,10 @@ video {
 @media (max-width: 768px) {
   .hamburguerMenuMobile {
     display: block;
+  }
+
+  .images-carousel-services {
+    display: none;
   }
 }
 
@@ -703,19 +711,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 625px) {
-
+  
   .images-carousel-services > img {
-   display: none;
-  }
+    display: none;
+   }
 
-  .arrow-right-services{
-    top: calc(100% * 1.75);
+  .arrow-right-services {
+    top: calc(100% * 1.95);
     width: 20px;
     right: 5px;
   }
 
-  .arrow-left-services{
-    top: calc(100% * 1.75);
+  .arrow-left-services {
+    top: calc(100% * 1.95);
     width: 20px;
     left: 5px;
   }
@@ -724,7 +732,7 @@ body::-webkit-scrollbar-thumb {
     top: calc(100% * 1.2);
   }
 
-  .carousel-container-main > div > div{
+  .carousel-container-main > div > div {
     padding: 2%;
   }
 
@@ -736,6 +744,5 @@ body::-webkit-scrollbar-thumb {
 
   .carousel-slide-services > div > div > p {
     text-align: center;
-    font-size: 16px;
   }
 }
