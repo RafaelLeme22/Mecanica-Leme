@@ -117,10 +117,11 @@ carouselSlide.addEventListener("transitionend", () => {
 
 const carouselSlide2 = document.querySelector(".carousel-slide-services");
 const carouselImages2 = document.querySelectorAll(".get-to-carousel");
-console.log(carouselImages2)
 
 const carouselSlide3 = document.querySelector(".images-carousel-services");
-const carouselImages3 = document.querySelectorAll(".images-carousel-services img");
+const carouselImages3 = document.querySelectorAll(
+  ".images-carousel-services img"
+);
 
 // Buttons
 const nextButton2 = document.querySelector("#prevButton2");
@@ -132,16 +133,16 @@ let counter3 = 1;
 let size2 = carouselImages2[0].clientWidth;
 let size3 = carouselImages3[0].clientWidth;
 
-carouselSlide2.style.transform = "translateX(" + (-size2 * counter2) + "px)";
-carouselSlide3.style.transform = "translateX(" + (-size3 * counter3) + "px)";
+carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
+carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
 
 // Button Listeners
 
 prevButton2.addEventListener("click", () => {
-  if (size2 == 0){
+  if (size2 == 0) {
     size2 = carouselImages2[0].clientWidth;
   }
-  if (size3 == 0){
+  if (size3 == 0) {
     size3 = carouselImages3[0].clientWidth;
   }
   if (counter2 >= carouselImages2.length - 1) return;
@@ -149,16 +150,15 @@ prevButton2.addEventListener("click", () => {
   carouselSlide3.style.transition = "transform 0.4s ease-in-out";
   counter2++;
   counter3++;
-  carouselSlide2.style.transform = "translateX(" + (-size2 * counter2) + "px)";
-  carouselSlide3.style.transform = "translateX(" + (-size3 * counter3) + "px)";
-
+  carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
+  carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
 });
 
 nextButton2.addEventListener("click", () => {
-  if (size2 == 0){
+  if (size2 == 0) {
     size2 = carouselImages2[0].clientWidth;
   }
-  if (size3 == 0){
+  if (size3 == 0) {
     size3 = carouselImages3[0].clientWidth;
   }
   if (counter2 <= 0) return;
@@ -166,15 +166,15 @@ nextButton2.addEventListener("click", () => {
   carouselSlide3.style.transition = "transform 0.4s ease-in-out";
   counter2--;
   counter3--;
-  carouselSlide2.style.transform = "translateX(" + (-size2 * counter2) + "px)";
-  carouselSlide3.style.transform = "translateX(" + (-size3 * counter3) + "px)";
+  carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
+  carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
 });
 
 carouselSlide2.addEventListener("transitionend", () => {
   if (carouselImages2[counter2].id === "lastClone2") {
     carouselSlide2.style.transition = "none";
     counter2 = carouselImages2.length - 2;
-    carouselSlide2.style.transform = "translateX(" + (-size2 * counter2) + "px)";
+    carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
   }
   if (carouselImages2[counter2].id === "firstClone2") {
     carouselSlide2.style.transition = "none";
@@ -187,11 +187,18 @@ carouselSlide3.addEventListener("transitionend", () => {
   if (carouselImages3[counter3].id === "lastClone3") {
     carouselSlide3.style.transition = "none";
     counter3 = carouselImages3.length - 2;
-    carouselSlide3.style.transform = "translateX(" + (-size3 * counter3) + "px)";
+    carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
   }
   if (carouselImages3[counter3].id === "firstClone3") {
     carouselSlide3.style.transition = "none";
     counter3 = carouselImages3.length - counter3;
     carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
   }
+});
+
+document.getElementById("contact-submit").addEventListener("click", () => {
+  document
+    .getElementById("contact-submit")
+    .setAttribute("disabled", "disabled");
+  document.getElementById("thanksMessage").style.display = "block";
 });

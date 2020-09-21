@@ -2,7 +2,10 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mecânica Leme</title>
     <meta name="description" content="Site da empresa Mecanica Leme" />
@@ -321,20 +324,21 @@
               <div class="col-md-4"></div>
               <div class="col-md-6">
                 <form
-                  action="mailto:voigt.gustavoh@gmail.com"
+                  action="https://script.google.com/macros/s/AKfycbz1z7__SW89klfk7_jF2bVE4vv-oOuzzYU8yan_5SYOqbPSbVU/exec"
                   method="post"
                   enctype="text/plain"
                   name="contact-form"
                   id="contact-form"
+                  class="gform"
                 >
                   <ul>
                     <li class="mb-5">
-                      <label for="contact-name">Nome :</label>
+                      <label for="name">Nome :</label>
                       <div class="textarea">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
+                          name="name"
+                          id="name"
                           value=""
                           required
                         />
@@ -342,12 +346,12 @@
                     </li>
 
                     <li class="mb-5">
-                      <label for="contact-email">E-mail :</label>
+                      <label for="email">E-mail :</label>
                       <div class="textarea">
                         <input
                           type="email"
-                          name="contact-email"
-                          id="contact-email"
+                          name="email"
+                          id="email"
                           value=""
                           required
                         />
@@ -355,11 +359,11 @@
                     </li>
 
                     <li class="mb-5">
-                      <label for="contact-project">Mensagem :</label>
+                      <label for="message">Mensagem :</label>
                       <div class="textarea">
                         <textarea
-                          name="contact-project"
-                          id="contact-project"
+                          name="message"
+                          id="message"
                           rows="6"
                           required
                         ></textarea>
@@ -367,6 +371,10 @@
                     </li>
                   </ul>
 
+                  <fieldset class="pure-group honeypot-field">
+                    <label for="honeypot"></label>
+                    <input id="honeypot" type="text" name="honeypot" value="" />
+                  </fieldset>
                   <button
                     type="submit"
                     name="contact-submit"
@@ -376,6 +384,16 @@
                     Enviar mensagem
                   </button>
                 </form>
+                <div
+                  id="thanksMessage"
+                  class="thankyou_message"
+                  style="display: none"
+                >
+                  <p>
+                    Obrigado por entrar em contato! Daremos um retorno o mais
+                    rápido possível.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -408,9 +426,12 @@
                       alt="Icone de um E-mail"
                       class="col-1 col-sm-1 col-md-1 phone-image"
                     />
-                    <p class="col-md-10 text-image-footer">
-                      emailDaEmpresa@email.com
-                    </p>
+                    <a
+                      href="mailto:mecanicaleme@gmail.com"
+                      class="col-md-10 email-link text-image-footer"
+                    >
+                      mecanicaleme@gmail.com
+                    </a>
                   </div>
                   <div class="row-md-12 d-flex mb-2">
                     <img
@@ -454,5 +475,10 @@
       </div>
     </div>
     <script src="/src/script.js"></script>
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="/src/mail.js"
+    ></script>
   </body>
 </html>
