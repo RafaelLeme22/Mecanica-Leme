@@ -195,10 +195,3 @@ carouselSlide3.addEventListener("transitionend", () => {
     carouselSlide3.style.transform = "translateX(" + -size3 * counter3 + "px)";
   }
 });
-
-document.getElementById("contact-submit").addEventListener("click", () => {
-  document
-    .getElementById("contact-submit")
-    .setAttribute("disabled", "disabled");
-  document.getElementById("thanksMessage").style.display = "block";
-});
